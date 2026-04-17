@@ -1,0 +1,29 @@
+---
+const items = [
+  { icon: 'bi-geo-alt', title: 'Cobertura Nacional', desc: 'Tours en todos los rincones del Perú.' },
+  { icon: 'bi-lightning-charge', title: 'Reserva Rápida', desc: 'Reserva en línea de forma fácil y segura.' },
+  { icon: 'bi-tag', title: 'Precios Competitivos', desc: 'Las mejores tarifas garantizadas.' },
+  { icon: 'bi-pencil-square', title: 'Itinerarios a Medida', desc: 'Diseñamos tu viaje perfecto.' },
+  { icon: 'bi-headset', title: 'Soporte 24/7', desc: 'Estamos contigo en todo momento.' },
+  { icon: 'bi-people', title: 'Guías Locales', desc: 'Expertos certificados que aman su tierra.' },
+];
+---
+<section id="actividades" class="section">
+  <div class="container-pb">
+    <div class="text-center mb-12">
+      <span class="script-title">¿Por Qué Nosotros?</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2">Razones para Elegirnos</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {items.map(i => (
+        <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+          <div class="w-14 h-14 rounded-full bg-gold/20 flex items-center justify-center text-gold text-2xl mb-4">
+            <i class={`bi ${i.icon}`}></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">{i.title}</h3>
+          <p class="text-gray-600 text-sm">{i.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

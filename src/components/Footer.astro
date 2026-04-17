@@ -1,0 +1,165 @@
+---
+const payments = [
+  {
+    name: 'Visa',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Visa_Inc._logo_%282005%E2%80%932014%29.svg/250px-Visa_Inc._logo_%282005%E2%80%932014%29.svg.png',
+    bg: '#1A1F71',
+  },
+  {
+    name: 'Mastercard',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/250px-Mastercard-logo.svg.png',
+    bg: '#fff',
+  },
+  {
+    name: 'PayPal',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/250px-PayPal.svg.png',
+    bg: '#fff',
+  },
+  {
+    name: 'Amex',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/American_Express_logo_%282018%29.svg/250px-American_Express_logo_%282018%29.svg.png',
+    bg: '#007BC1',
+  },
+  {
+    name: 'Western Union',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Western_Union_Logo_2019.svg/250px-Western_Union_Logo_2019.svg.png',
+    bg: '#fff',
+  },
+];
+---
+
+<footer style="background-color:#141816;" class="text-white pt-16 pb-0">
+  <div class="container-pb grid md:grid-cols-4 gap-10 pb-14">
+
+    <!-- Col 1: Logo + CTA -->
+    <div class="flex flex-col gap-5">
+      <img
+        src="https://www.perubeyond.com/wp-content/uploads/2025/12/logo_pb.png"
+        alt="Peru Beyond"
+        class="max-w-[170px]"
+      />
+      <p class="text-2xl font-bold leading-snug">
+        ¿Quieres Reservar<br />Un Paquete<br />Turístico?
+      </p>
+      <a
+        href="https://wa.me/51943491959"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block bg-green-600 hover:bg-green-500 transition text-white font-bold px-6 py-3 rounded-lg text-sm w-fit"
+      >
+        Contáctanos Ahora
+      </a>
+    </div>
+
+    <!-- Col 2: Enlaces rápidos -->
+    <div>
+      <h4 class="text-white font-bold text-base mb-5">Enlaces Rápidos</h4>
+      <ul class="space-y-3 text-sm text-gray-300">
+        <li><a href="#about" class="hover:text-white transition">Sobre Nosotros</a></li>
+        <li><a href="#" class="hover:text-white transition">Destinos</a></li>
+        <li><a href="#machupicchu" class="hover:text-white transition">Paquetes Turísticos</a></li>
+        <li><a href="#" class="hover:text-white transition">Blog de Viajes</a></li>
+        <li><a href="#" class="hover:text-white transition">Contáctanos</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 3: Contacto -->
+    <div>
+      <h4 class="text-white font-bold text-base mb-5">Contacto</h4>
+      <ul class="space-y-5 text-sm">
+        <li>
+          <p class="font-bold flex items-center gap-2 mb-1">
+            <i class="bi bi-telephone-fill text-gold"></i> Teléfono
+          </p>
+          <a href="tel:+51943491959" class="text-gray-300 hover:text-white transition">+51 943 491 959</a>
+        </li>
+        <li>
+          <p class="font-bold flex items-center gap-2 mb-1">
+            <i class="bi bi-send-fill text-gold"></i> Enviar Mensaje
+          </p>
+          <a href="mailto:info@perubeyond.com" class="text-gray-300 hover:text-white transition">info@perubeyond.com</a>
+        </li>
+        <li>
+          <p class="font-bold flex items-center gap-2 mb-1">
+            <i class="bi bi-geo-alt-fill text-gold"></i> Dirección
+          </p>
+          <span class="text-gray-300">Calle Zetas 109, Cusco — Perú</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Col 4: Info + Pagos + Libro -->
+    <div class="flex flex-col gap-6">
+      <!-- Estamos aquí para ti -->
+      <div>
+        <h4 class="text-white font-bold text-base mb-2">Estamos Aquí Para Ti</h4>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Explora con confianza. En <strong class="text-white">Perú Beyond</strong> te
+          ayudamos a vivir experiencias únicas con atención personalizada y guías expertos.
+        </p>
+      </div>
+
+      <!-- Métodos de pago -->
+      <div>
+        <h4 class="text-white font-bold text-base mb-3">Medios de Pago Aceptados</h4>
+        <div class="flex flex-wrap gap-2 items-center">
+          {payments.map(p => (
+            <div
+              class="rounded-md overflow-hidden flex items-center justify-center px-2 py-1.5"
+              style={`background-color:${p.bg};`}
+              title={p.name}
+            >
+              <img src={p.img} alt={p.name} class="h-5 w-auto object-contain" />
+            </div>
+          ))}
+          <!-- WeTravel badge (no hotlink disponible) -->
+          <div
+            class="rounded-md flex items-center justify-center px-2.5 py-1.5 text-white font-bold text-xs tracking-wide"
+            style="background-color:#00b386;"
+            title="WeTravel"
+          >
+            W<span class="font-normal">e</span>Travel
+          </div>
+        </div>
+      </div>
+
+      <!-- Libro de Reclamaciones -->
+      <div>
+        <h4 class="text-white font-bold text-base mb-3">Libro de Reclamaciones</h4>
+        <a href="#" class="inline-flex items-center gap-2 hover:opacity-80 transition">
+          <span class="text-4xl leading-none">📖</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom bar -->
+  <div style="border-top:1px solid rgba(255,255,255,0.08);" class="container-pb py-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+    <!-- Redes sociales -->
+    <div class="flex items-center gap-3">
+      <a href="https://www.facebook.com/perubeyond" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:border-white hover:text-white transition">
+        <i class="bi bi-facebook text-xs"></i>
+      </a>
+      <a href="https://www.instagram.com/perubeyond/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:border-white hover:text-white transition">
+        <i class="bi bi-instagram text-xs"></i>
+      </a>
+      <a href="https://www.tiktok.com/@perubeyond_agency" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:border-white hover:text-white transition">
+        <i class="bi bi-tiktok text-xs"></i>
+      </a>
+      <a href="https://wa.me/51943491959" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:border-white hover:text-white transition">
+        <i class="bi bi-whatsapp text-xs"></i>
+      </a>
+    </div>
+
+    <!-- Copyright -->
+    <span>©Copyright 2025 PerúBeyond</span>
+
+    <!-- Legal -->
+    <div class="flex items-center gap-3">
+      <a href="#" class="hover:text-white transition">Política de Privacidad</a>
+      <span>•</span>
+      <a href="#" class="hover:text-white transition">Términos y Condiciones</a>
+    </div>
+  </div>
+</footer>

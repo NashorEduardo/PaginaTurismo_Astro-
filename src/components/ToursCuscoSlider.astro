@@ -1,0 +1,69 @@
+---
+const proyectos = [
+  {
+    image: 'https://upload.wikimedia.org/wikipedia/commons/2/22/Machu_Picchu_Overlook.jpg',
+    titulo: 'Our Next Trek Partnership Visit to Machu Picchu',
+    slug: '/blog/visita-machu-picchu',
+    col: 'md:col-span-2',
+    h: 'h-64 md:h-72',
+  },
+  {
+    image: 'https://upload.wikimedia.org/wikipedia/commons/1/11/Drying_quinoa_near_Puno.JPG',
+    titulo: 'Quinoa Project',
+    slug: '/blog/proyecto-quinoa',
+    col: 'md:col-span-1',
+    h: 'h-64 md:h-72',
+  },
+  {
+    image: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/Jill_Biden_visits_Peru%2C_June%2C_2016_08.jpg',
+    titulo: 'Free Medical Assistance to Farmers',
+    slug: '/blog/asistencia-medica',
+    col: 'md:col-span-1',
+    h: 'h-64 md:h-72',
+  },
+  {
+    image: 'https://upload.wikimedia.org/wikipedia/commons/a/a0/Women_weaving_in_Arequipa_Peru_2014_%2837022805115%29.jpg',
+    titulo: 'The Unique Women-led Community Lodge in Cusco',
+    slug: '/blog/lodge-comunitario',
+    col: 'md:col-span-1',
+    h: 'h-52 md:h-60',
+  },
+  {
+    image: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Emory_S_Land_Sailors_Volunteer_at_Orphanage_%288774623%29.jpg',
+    titulo: 'Doing Volunteerism in Therapeutic Orphanage',
+    slug: '/blog/voluntariado-orfanato',
+    col: 'md:col-span-1',
+    h: 'h-52 md:h-60',
+  },
+  {
+    image: 'https://upload.wikimedia.org/wikipedia/commons/0/07/School_Children_Public_Fountain_Plaza_de_Armas_Cusco_Peru_2005.jpg',
+    titulo: 'English Teacher in Chakana Town',
+    slug: '/blog/profesor-ingles',
+    col: 'md:col-span-2',
+    h: 'h-52 md:h-60',
+  },
+];
+---
+<section id="proyectos-sociales" class="section bg-softgreen">
+  <div class="container-pb">
+    <div class="text-center mb-12">
+      <span class="script-title">Proyectos sociales</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2">Al viajar con nosotros, contribuyes así</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {proyectos.map(p => (
+        <a href={p.slug} class={`block rounded-2xl overflow-hidden shadow-lg relative group ${p.col}`}>
+          <img
+            src={p.image}
+            alt={p.titulo}
+            class={`w-full object-cover transition-transform duration-300 group-hover:scale-105 ${p.h}`}
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4">
+            <h3 class="text-white text-sm font-bold leading-snug">{p.titulo}</h3>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

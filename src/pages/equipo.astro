@@ -1,0 +1,272 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const teamMembers = [
+  {
+    name: 'Camille Arres',
+    role: 'Asesora de viaje',
+    category: 'asesores',
+    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/camille-arres-perubeyond.webp',
+    bio: 'Magíster en Turismo. Experta en gestión turística. Apasionada por la difusión cultural del Perú y excelencia en el servicio.',
+    whatsapp: '+51943491959',
+  },
+  {
+    name: 'Shirley Tinta',
+    role: 'Asesora de viaje',
+    category: 'asesores',
+    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/shirley-tinta-perubeyond.webp',
+    bio: 'Licenciada en Turismo. Experta en gestión turística, orientada al logro de resultados y excelencia en el servicio.',
+    whatsapp: '+51943491959',
+  },
+  {
+    name: 'Roxana Cruz',
+    role: 'Asesora de viaje',
+    category: 'asesores',
+    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/roxana-cruz-perubeyond.webp',
+    bio: 'Bachiller en Administración Turística, especializada en la creación, asesoramiento y gestión de viajes.',
+    whatsapp: '+51943491959',
+  },
+  {
+    name: 'Scott Diaz',
+    role: 'Asesor de viajes',
+    category: 'asesores',
+    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/scott-diaz-perubeyond.webp',
+    bio: 'Bachiller en Administración de Turismo. Experto en gestión turística, apasionado por la excelencia y servicio al cliente.',
+    whatsapp: '+51943491959',
+  },
+  {
+    name: 'Melody Huayllasi',
+    role: 'Asesora de viajes',
+    category: 'asesores',
+    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/melody-huayllasi-perubeyond.webp',
+    bio: 'Bachiller en Turismo. Experta en gestión turística con pasión por la excelencia operativa y el servicio al cliente.',
+    whatsapp: '+51943491959',
+  },
+  {
+    name: 'Juan Carlos',
+    role: 'Asesor de viajes',
+    category: 'asesores',
+    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/juan-carlos-perubeyond.webp',
+    bio: 'Bachiller en Ingeniería industrial, con experiencia en gestión turística, orientado a la excelencia en el servicio.',
+    whatsapp: '+51943491959',
+  },
+  {
+    name: 'Gerente General',
+    role: 'Administración',
+    category: 'administracion',
+    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/team-perubeyond.jpg',
+    bio: 'Líder del equipo con amplia experiencia en dirección de agencias de turismo y desarrollo de estrategias de crecimiento.',
+    whatsapp: '+51943491959',
+  },
+  {
+    name: 'Coordinador de Operaciones',
+    role: 'Operaciones',
+    category: 'operaciones',
+    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/team-perubeyond.jpg',
+    bio: 'Especialista en logística de viajes, coordinación de transporte y gestión de proveedores turísticos en todo el Perú.',
+    whatsapp: '+51943491959',
+  },
+  {
+    name: 'Guía Principal',
+    role: 'Guía Certificado',
+    category: 'guias',
+    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/team-perubeyond.jpg',
+    bio: 'Guía oficial certificado por MINCETUR con más de 10 años de experiencia en Cusco, Machu Picchu y rutas alternativas.',
+    whatsapp: '+51943491959',
+  },
+  {
+    name: 'Especialista Digital',
+    role: 'TI & Marketing',
+    category: 'marketing',
+    photo: 'https://www.perubeyond.com/wp-content/uploads/2025/07/team-perubeyond.jpg',
+    bio: 'Experto en marketing digital, SEO y desarrollo web, encargado de la presencia online y estrategia digital de Peru Beyond.',
+    whatsapp: '+51943491959',
+  },
+];
+
+const tabs = [
+  { id: 'todos',         label: 'Todos' },
+  { id: 'asesores',     label: 'Asesores de viajes' },
+  { id: 'administracion', label: 'Administración' },
+  { id: 'operaciones',  label: 'Operaciones' },
+  { id: 'guias',        label: 'Guías' },
+  { id: 'marketing',    label: 'TI & Marketing' },
+];
+---
+
+<Layout>
+  <Header />
+
+  <!-- IMAGEN FIJA DE FONDO -->
+  <div class="fixed inset-0 -z-10">
+    <img
+      src="https://blog.incarail.com/wp-content/uploads/2025/06/laguna-humantay.webp"
+      alt="Fondo Nuestro Equipo"
+      class="w-full h-full object-cover object-center"
+    />
+    <div class="absolute inset-0 bg-black/40"></div>
+  </div>
+
+  <!-- HERO -->
+  <section class="h-[55vh] flex items-center justify-center text-center text-white px-4 pt-20">
+    <div>
+      <p class="script-title text-white/90 mb-3">Peru Beyond</p>
+      <h1 class="text-5xl md:text-7xl font-extrabold drop-shadow-2xl leading-tight">
+        Nuestro <span class="text-gold">Equipo</span>
+      </h1>
+      <nav class="flex items-center justify-center gap-2 text-sm mt-5 text-white/60">
+        <a href="/" class="hover:text-white transition-colors">Inicio</a>
+        <i class="bi bi-chevron-right text-[10px]"></i>
+        <span class="text-white/90">Nuestro Equipo</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- SECCIONES -->
+  <div class="relative z-10 space-y-6 px-4 md:px-8 max-w-7xl mx-auto pb-0">
+
+    <!-- ══ SECCIÓN 1: Foto grupal + descripción ══ -->
+    <div class="rounded-3xl shadow-2xl overflow-hidden" style="background-color:#F0FDF4">
+      <div class="p-8 md:p-12">
+
+        <!-- Encabezado centrado -->
+        <div class="text-center mb-8">
+          <span class="script-title">Perú Beyond</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold mt-2 text-gray-900">
+            Nuestro Equipo de Trabajo
+          </h2>
+        </div>
+
+        <!-- Foto principal del equipo completo -->
+        <div class="rounded-2xl overflow-hidden shadow-xl mb-8">
+          <img
+            src="https://www.perubeyond.com/wp-content/uploads/2025/07/team-perubeyond.jpg"
+            alt="Equipo Peru Beyond"
+            class="w-full h-[420px] md:h-[520px] object-cover object-center"
+          />
+        </div>
+
+        <!-- Descripción debajo de la foto -->
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="text-gray-700 text-base md:text-lg leading-relaxed font-medium">
+            En <strong>Perú Beyond</strong> transformamos cada viaje en una experiencia única e inolvidable.
+            Nuestra agencia se especializa en crear aventuras personalizadas que combinan cultura, naturaleza
+            y autenticidad, conectando a nuestros viajeros con la esencia del Perú. Con un equipo apasionado
+            y comprometido, nos encargamos de cada detalle para que cada viaje sea seguro, memorable y lleno
+            de momentos que trascienden.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ══ SECCIÓN 2: Tarjetas de integrantes ══ -->
+    <div class="rounded-3xl shadow-2xl overflow-hidden" style="background-color:#F0FDF4">
+      <div class="p-8 md:p-12">
+
+        <!-- Título sección -->
+        <div class="text-center mb-10">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-green-700">Nuestro equipo</h2>
+          <p class="text-gray-500 mt-2 text-base">Conoce a los apasionados profesionales que hacen posible cada experiencia mágica</p>
+        </div>
+
+        <!-- Tabs de filtro -->
+        <div class="flex flex-wrap justify-center gap-2 mb-10" id="team-tabs">
+          {tabs.map((tab, i) => (
+            <button
+              data-filter={tab.id}
+              class={`tab-btn px-5 py-2 rounded-full text-sm font-semibold border transition-all duration-200 ${
+                i === 0
+                  ? 'bg-green-700 text-white border-green-700'
+                  : 'bg-white text-gray-700 border-gray-300 hover:border-green-500 hover:text-green-600'
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        <!-- Grid de tarjetas -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="team-grid">
+          {teamMembers.map(member => (
+            <div
+              class="team-card bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow border border-green-50 flex flex-col items-center text-center p-6"
+              data-category={member.category}
+            >
+              <!-- Foto circular -->
+              <div class="w-28 h-28 rounded-full overflow-hidden border-4 border-green-100 shadow-md mb-4 flex-shrink-0">
+                <img
+                  src={member.photo}
+                  alt={member.name}
+                  class="w-full h-full object-cover object-top"
+                  onerror="this.src='https://www.perubeyond.com/wp-content/uploads/2025/07/team-perubeyond.jpg'"
+                />
+              </div>
+
+              <!-- Nombre y rol -->
+              <h3 class="font-extrabold text-gray-900 text-lg mb-1">{member.name}</h3>
+              <p class="text-teal-600 font-semibold text-sm mb-3">{member.role}</p>
+
+              <!-- Descripción -->
+              <p class="text-gray-500 text-sm leading-relaxed mb-5">{member.bio}</p>
+
+              <!-- Acciones -->
+              <div class="flex items-center gap-3 mt-auto">
+                <a
+                  href={`https://wa.me/${member.whatsapp.replace(/\D/g, '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-green-600 hover:bg-green-50 transition-colors"
+                  title="WhatsApp"
+                >
+                  <i class="bi bi-whatsapp text-lg"></i>
+                </a>
+                <a
+                  href="/sobre-nosotros"
+                  class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-50 transition-colors"
+                  title="Ver más"
+                >
+                  <i class="bi bi-arrow-right text-lg"></i>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <Footer />
+</Layout>
+
+<script is:inline>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const cards = document.querySelectorAll('.team-card');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const filter = tab.dataset.filter;
+
+      // Actualizar estilos de tabs
+      tabs.forEach(t => {
+        t.classList.remove('bg-green-700', 'text-white', 'border-green-700');
+        t.classList.add('bg-white', 'text-gray-700', 'border-gray-300');
+      });
+      tab.classList.add('bg-green-700', 'text-white', 'border-green-700');
+      tab.classList.remove('bg-white', 'text-gray-700', 'border-gray-300');
+
+      // Filtrar tarjetas
+      cards.forEach(card => {
+        if (filter === 'todos' || card.dataset.category === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>

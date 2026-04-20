@@ -6,7 +6,7 @@
   <div class="absolute inset-0 w-full h-full pointer-events-none">
     <iframe
       id="hero-yt"
-      src="https://www.youtube.com/embed/Zk9J5xnTVMA?autoplay=1&mute=1&controls=0&loop=1&playlist=Zk9J5xnTVMA&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&disablekb=1&enablejsapi=1"
+      src="https://www.youtube.com/embed/HjTJtS7r8do?autoplay=1&mute=1&loop=1&playlist=HjTJtS7r8do&controls=0&showinfo=0&rel=0"
       allow="autoplay; encrypted-media"
       allowfullscreen
       class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full min-w-[177.78vh] min-h-[56.25vw]"
@@ -16,6 +16,18 @@
 
   <!-- Overlay oscuro -->
   <div class="absolute inset-0 bg-navy/35"></div>
+
+  <!-- Neblina animada -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none z-[2]">
+    <div class="fog-layer fog-1"></div>
+    <div class="fog-layer fog-2"></div>
+    <div class="fog-layer fog-3"></div>
+  </div>
+
+  <!-- Lorito mascota flotando abajo a la derecha -->
+  <div class="absolute bottom-0 right-8 z-10 pointer-events-none lorito-float" style="width:280px;">
+    <img src="/images/ValleSagrado/loritoBeyond.png" alt="Lorito Peru Beyond" class="w-full drop-shadow-2xl" />
+  </div>
 
   <!-- Contenido -->
   <div class="container-pb text-white py-24 relative z-10 text-center">
@@ -43,3 +55,4 @@
     </a>
   </div>
 </section>
+</style>

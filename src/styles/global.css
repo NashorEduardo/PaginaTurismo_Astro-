@@ -10,3 +10,9 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Rubik', sans-serif; color: #202f59; }
 .btn-gold:hover { background:#202f59; color:#FFBC00; }
 .section { padding: 70px 0; }
 .script-title { font-family: 'Satisfy', cursive; color:#FFBC00; font-size:1.5rem; }
+
+@keyframes loritoFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+.lorito-float { animation: loritoFloat 3s ease-in-out infinite; }

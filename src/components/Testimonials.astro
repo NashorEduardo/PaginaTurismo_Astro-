@@ -60,49 +60,8 @@ const hasData = reviews.length > 0;
       </p>
     )}
 
-    {!API_KEY || API_KEY === 'TU_API_KEY_AQUI' ? (
-      <p class="text-center text-sm text-amber-600 bg-amber-50 rounded-xl px-6 py-4 max-w-xl mx-auto">
-        Configura <code>GOOGLE_PLACES_API_KEY</code> en el archivo <code>.env</code> para mostrar las reseñas reales.
-      </p>
-    ) : hasData ? (
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {reviews.map((r) => (
-          <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition flex flex-col gap-4">
-            <!-- Encabezado: avatar + nombre -->
-            <div class="flex items-center gap-3">
-              <img
-                src={r.profile_photo_url}
-                alt={r.author_name}
-                class="w-11 h-11 rounded-full object-cover"
-                onerror="this.src='https://ui-avatars.com/api/?name=' + encodeURIComponent(this.alt) + '&background=C9A84C&color=fff&size=44'"
-              />
-              <div>
-                <p class="font-bold text-sm leading-tight">{r.author_name}</p>
-                <p class="text-xs text-gray-400">{r.relative_time_description}</p>
-              </div>
-              <!-- Logo Google pequeño -->
-              <i class="bi bi-google text-[#4285F4] ml-auto text-lg"></i>
-            </div>
+    <script is:inline defer async src='https://cdn.trustindex.io/loader.js?e8ad7eb69eeb745a12561ff1910'></script>
 
-            <!-- Estrellas -->
-            <div class="flex text-gold gap-0.5">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <i class={`bi ${i < r.rating ? 'bi-star-fill' : 'bi-star'} text-sm`}></i>
-              ))}
-            </div>
-
-            <!-- Texto -->
-            <p class="text-gray-600 text-sm leading-relaxed line-clamp-5">{r.text}</p>
-          </div>
-        ))}
-      </div>
-    ) : (
-      <p class="text-center text-gray-500 text-sm">No hay reseñas disponibles aún.</p>
-    )}
-
-
-
-  
     <!-- CTA Google Maps -->
     <div class="text-center mt-10">
       <a

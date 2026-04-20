@@ -14,14 +14,12 @@ const menu = [
         { n: "Lima - Paracas - Machu Picchu - Montaña Arcoíris - 8 días / 7 noches",  h: "/tours/express-peru-7-days" },
         { n: "Lima - Paracas - Machu Picchu - Montaña Arcoíris - 9 días / 8 noches",  h: "/tours/express-peru-7-days" },
         { n: "Lima - Huacachina - Machu Picchu - Montaña Arcoíris - 10 días / 9 noches",  h: "/tours/express-peru-7-days" },      
-      
       ],
       images: [
         { src: "/images/cusco.webp",  label: "CUSCO" },
-        { src: "/images/Machu.jpg",  label: "MACHUPICCHU" },
-        { src: "/images/ica.jpg",    label: "ICA" },
+        { src: "/images/Machu.jpg",   label: "MACHUPICCHU" },
+        { src: "/images/ica.jpg",     label: "ICA" },
         { src: "/images/lima.webp",   label: "LIMA" },
-        //{ src: "/images/ValleSagrado/ollantaytambo-3.webp",   label: "PUNO" },
       ],
     },
   },
@@ -37,10 +35,17 @@ const menu = [
         href: "/tours/machu-picchu",
       },
       tours: [
-        { name: "Cusco, Machu Picchu, Maras y Moray",       duration: "3D / 2N", img: "/images/Machu.jpg", href: "/tours/cusco-machu-picchu-3d" },
-        { name: "Valle Sagrado + Machu Picchu", duration: "4D / 3N", img: "/images/ValleSagrado/Machu2.jpg", href: "/tours/valle-sagrado-machu-picchu" },
-        { name: "Machu Picchu Full Day",        duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg", href: "/tours/machu-picchu-full-day" },
-
+        { name: "Cusco, Machu Picchu, Maras y Moray", duration: "3D / 2N", img: "/images/Machu.jpg",                    href: "/tours/cusco-machu-picchu-3d" },
+        { name: "Cusco y Machu Picchu",        duration: "4D / 3N", img: "/images/ValleSagrado/Machu2.jpg",      href: "/tours/valle-sagrado-machu-picchu" },
+        { name: "Cusco, Valle Sagrado y Machu Picchu",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
+        { name: "Cusco, Machu Picchu y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
+        { name: "Cusco, Machu Picchu y Laguna Humantay",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
+        { name: "Cusco, Valle Sagrado, Machu Picchu y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
+        { name: "Cusco, Valle Sagrado, Machu Picchu y Laguna Humantay",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
+        { name: "Cusco, Machu Picchu, Humantay y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
+        { name: "Cusco, Machu Picchu y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
+        { name: "Cusco, Machu Picchu, Maras Moray y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
+           
       ],
     },
   },
@@ -63,9 +68,9 @@ const menu = [
           title: "Cultura Viva & Historia",
           img: "/images/ValleSagrado/moray.webp",
           tours: [
-            { name: "City Tour + 4 Ruinas",      href: "/tours/city-tour-cusco" },
-            { name: "Super Valle Sagrado",        href: "/tours/super-valle-sagrado" },
-            { name: "Tour 7 Lagunas",             href: "/tours/tour-7-lagunas" },
+            { name: "City Tour + 4 Ruinas", href: "/tours/city-tour-cusco" },
+            { name: "Super Valle Sagrado",  href: "/tours/super-valle-sagrado" },
+            { name: "Tour 7 Lagunas",       href: "/tours/tour-7-lagunas" },
           ],
         },
         {
@@ -86,11 +91,11 @@ const menu = [
     type: 'mega-brand',
     details: {
       links: [
-        { n: "Sobre Nosotros", h: "/nosotros",  icon: "bi-people-fill" },
-        { n: "Nuestro Equipo", h: "/equipo",    icon: "bi-person-badge-fill" },
-        { n: "Blog de Viajes", h: "/blog",      icon: "bi-journal-richtext" },
-        { n: "Galería",        h: "/galeria",   icon: "bi-images" },
-        { n: "Contacto",       h: "/contacto",  icon: "bi-envelope-fill" },
+        { n: "Sobre Nosotros", h: "/nosotros", icon: "bi-people-fill" },
+        { n: "Nuestro Equipo", h: "/equipo",   icon: "bi-person-badge-fill" },
+        { n: "Blog de Viajes", h: "/blog",     icon: "bi-journal-richtext" },
+        { n: "Galería",        h: "/galeria",  icon: "bi-images" },
+        { n: "Contacto",       h: "/contacto", icon: "bi-envelope-fill" },
       ],
       contact: {
         phone: "+51 943 491 959",
@@ -105,35 +110,40 @@ const menu = [
 ---
 
 <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
-  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between py-3">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between py-3 relative">
 
     <!-- Logo -->
     <a href="/" class="flex items-center flex-shrink-0">
-      <img id="header-logo" 
-           src="https://www.perubeyond.com/wp-content/uploads/2025/07/logo-perubeyond-1.png" 
-           alt="Peru Beyond" 
-           width="140" 
+      <img id="header-logo"
+           src="https://www.perubeyond.com/wp-content/uploads/2025/07/logo-perubeyond-1.png"
+           alt="Peru Beyond"
+           width="140"
            class="transition-all duration-300" />
     </a>
 
     <!-- Nav Desktop -->
-    <nav class="hidden lg:flex items-center h-full">
+    <!-- CAMBIO 1: el nav tiene position relative para que mega-peru se ancle a él -->
+    <nav class="hidden lg:flex items-center h-full ">
       {menu.map(m => (
-        <div class="group relative h-full flex items-center">
-
+        <!-- CAMBIO 2: mega-peru usa static, el resto usa relative -->
+        <div class="group h-full flex items-center relative">
           <a href={m.href}
              class="header-link font-bold text-[13px] tracking-wider px-5 py-2 transition-all duration-300 text-white hover:text-gold flex items-center gap-1.5 rounded-lg hover:bg-white/10">
             {m.label}
             <i class="bi bi-chevron-down text-[9px] transition-transform duration-300 group-hover:rotate-180 opacity-60"></i>
           </a>
 
-          <!-- Dropdown wrapper -->
-          <div class="mega-dropdown absolute left-1/2 -translate-x-1/2 top-[calc(100%+8px)]
-                      opacity-0 invisible pointer-events-none
-                      group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
-                      transition-all duration-300 ease-out
-                      translate-y-2 group-hover:translate-y-0">
-
+          <!-- CAMBIO 3: dropdown wrapper diferenciado por tipo -->
+          <div class={`mega-dropdown pt-1
+            opacity-0 invisible pointer-events-none 
+            group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto 
+            transition-all duration-300 ease-out 
+            translate-y-2 group-hover:translate-y-0
+            ${m.type === 'mega-peru' 
+              ? 'fixed top-[50px] left-1/2 -translate-x-1/2 w-[980px]' 
+              : 'absolute top-[100%] left-1/2 -translate-x-1/2'}`}>
+                  
+                          
             <!-- ══════════════════════════════
                 TOURS PERÚ - VERSIÓN MEJORADA
             ══════════════════════════════ -->
@@ -142,7 +152,7 @@ const menu = [
                 <div class="grid grid-cols-12 gap-0">
 
                   <!-- IZQUIERDA -->
-                  <div class="col-span-5 bg-navy p-10 flex flex-col">
+                  <div class="col-span-5 bg-navy p-8 flex flex-col">
                     <div>
                       <span class="text-gold text-xs font-bold uppercase tracking-widest mb-3 block">
                         Paquetes Perú
@@ -263,8 +273,6 @@ const menu = [
             {m.type === 'mega-machu' && (
               <div class="w-[820px] bg-white rounded-[28px] shadow-2xl border border-gray-100 overflow-hidden">
                 <div class="grid grid-cols-5 gap-0">
-
-                  <!-- Featured izquierda -->
                   <div class="col-span-2 relative h-full min-h-[340px] group/feat cursor-pointer overflow-hidden">
                     <img src={m.details.featured.img}
                          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/feat:scale-105"
@@ -280,38 +288,44 @@ const menu = [
                       </a>
                     </div>
                   </div>
+                  <div class="col-span-3 p-7 flex flex-col">
+                    <p class="text-gray-400 text-xs uppercase tracking-widest font-semibold mb-5">
+                      Paquetes disponibles
+                    </p>
 
-                  <!-- Tours derecha -->
-                  <div class="col-span-3 p-7">
-                    <p class="text-gray-400 text-xs uppercase tracking-widest font-semibold mb-5">Paquetes disponibles</p>
-                    <div class="space-y-3">
+                    <!-- Columna con scroll -->
+                    <div class="overflow-y-auto max-h-[340px] space-y-2 pr-2
+                                scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-transparent
+                                hover:scrollbar-thumb-gray-300">
                       {m.details.tours.map(tour => (
                         <a href={tour.href}
-                           class="flex items-center gap-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors group/tour border border-transparent hover:border-gray-100">
-                          <div class="relative w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
+                          class="flex items-center gap-4 p-3 rounded-2xl hover:bg-gray-50 transition-colors group/tour border border-transparent hover:border-gray-100">
+                          <div class="relative w-14 h-14 rounded-xl overflow-hidden flex-shrink-0">
                             <img src={tour.img}
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover/tour:scale-110"
-                                 alt={tour.name} />
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover/tour:scale-110"
+                                alt={tour.name} />
                           </div>
-                          <div class="flex-1">
-                            <p class="text-navy font-bold text-sm group-hover/tour:text-gold transition-colors">{tour.name}</p>
+                          <div class="flex-1 min-w-0">
+                            <p class="text-navy font-bold text-sm group-hover/tour:text-gold transition-colors truncate">
+                              {tour.name}
+                            </p>
                             <p class="text-gray-400 text-xs mt-0.5 flex items-center gap-1">
                               <i class="bi bi-clock text-gold"></i> {tour.duration}
                             </p>
                           </div>
-                          <i class="bi bi-arrow-right text-gray-300 group-hover/tour:text-gold group-hover/tour:translate-x-1 transition-all"></i>
+                          <i class="bi bi-arrow-right text-gray-300 group-hover/tour:text-gold group-hover/tour:translate-x-1 transition-all flex-shrink-0"></i>
                         </a>
                       ))}
                     </div>
-                    <div class="mt-6 pt-5 border-t border-gray-100">
+
+                    <div class="mt-4 pt-4 border-t border-gray-100">
                       <a href="/tours/machu-picchu"
-                         class="flex items-center justify-between text-sm text-gray-500 hover:text-gold transition-colors font-medium">
+                        class="flex items-center justify-between text-sm text-gray-500 hover:text-gold transition-colors font-medium">
                         Ver todos los tours a Machu Picchu
                         <i class="bi bi-arrow-right"></i>
                       </a>
                     </div>
                   </div>
-
                 </div>
               </div>
             )}
@@ -356,8 +370,6 @@ const menu = [
             {m.type === 'mega-brand' && (
               <div class="w-[580px] bg-white rounded-[28px] shadow-2xl border border-gray-100 overflow-hidden">
                 <div class="grid grid-cols-2 gap-0">
-
-                  <!-- Links izquierda -->
                   <div class="p-7">
                     <span class="text-gold text-[10px] font-bold uppercase tracking-widest mb-4 block">La empresa</span>
                     <ul class="space-y-1 mb-8">
@@ -373,8 +385,6 @@ const menu = [
                         </li>
                       ))}
                     </ul>
-
-                    <!-- Contacto -->
                     <div class="border-t border-gray-100 pt-5 space-y-2">
                       <a href={`tel:${m.details.contact.phone}`}
                          class="flex items-center gap-2 text-xs text-gray-500 hover:text-gold transition-colors">
@@ -393,8 +403,6 @@ const menu = [
                       </a>
                     </div>
                   </div>
-
-                  <!-- Imagen + tagline derecha -->
                   <div class="relative overflow-hidden">
                     <img src={m.details.image}
                          class="absolute inset-0 w-full h-full object-cover"
@@ -405,7 +413,6 @@ const menu = [
                       <p class="text-white text-sm font-medium leading-snug">{m.details.tagline}</p>
                     </div>
                   </div>
-
                 </div>
               </div>
             )}
@@ -424,12 +431,10 @@ const menu = [
         </span>
         <span class="hidden lg:inline text-sm">+51 943 491 959</span>
       </a>
-
       <a href="/contacto"
          class="hidden lg:inline-flex items-center gap-2 bg-gold hover:bg-yellow-400 text-navy font-bold text-xs px-5 py-2.5 rounded-full transition-all shadow-lg shadow-gold/20 hover:shadow-gold/40 hover:-translate-y-0.5 uppercase tracking-wider">
         Reservar
       </a>
-
       <button id="mobile-menu-btn"
               class="header-burger lg:hidden text-2xl text-white transition-colors duration-300 focus:outline-none p-2">
         <i class="bi bi-list"></i>
@@ -444,7 +449,6 @@ const menu = [
 <div id="mobile-menu"
      class="fixed inset-0 bg-navy z-[60] flex flex-col transition-all duration-500 translate-x-full lg:hidden overflow-y-auto">
 
-  <!-- Header móvil -->
   <div class="flex justify-between items-center px-8 py-6 border-b border-white/10">
     <img src="https://www.perubeyond.com/wp-content/uploads/2025/07/logo-perubeyond-1.png"
          alt="Logo" width="120" class="brightness-0 invert" />
@@ -453,7 +457,6 @@ const menu = [
     </button>
   </div>
 
-  <!-- Links móvil con acordeón -->
   <nav class="flex-1 px-6 py-6 space-y-1">
     {menu.map((m, i) => (
       <div class="mobile-item border-b border-white/10">
@@ -463,11 +466,10 @@ const menu = [
           {m.label}
           <i class="bi bi-chevron-down text-xs text-white/40 transition-transform duration-300"></i>
         </button>
-
         <div class="mobile-submenu overflow-hidden max-h-0 transition-all duration-400">
           <div class="pb-4 pl-2 space-y-2">
             {m.type === 'mega-peru' && m.details.links.map(l => (
-              <a href={l.h} class="block text-white/60 hover:text-gold text-sm py-1.5 transition-colors">{l.n}</a>
+              <a href={l.h || "#"} class="block text-white/60 hover:text-gold text-sm py-1.5 transition-colors">{l.n}</a>
             ))}
             {m.type === 'mega-machu' && m.details.tours.map(t => (
               <a href={t.href} class="flex items-center justify-between text-white/60 hover:text-gold text-sm py-1.5 transition-colors">
@@ -493,7 +495,6 @@ const menu = [
     ))}
   </nav>
 
-  <!-- Footer móvil -->
   <div class="px-8 py-6 border-t border-white/10 space-y-3">
     <p class="text-gold font-bold uppercase text-[10px] tracking-widest">Contáctanos</p>
     <a href="tel:+51943491959" class="flex items-center gap-2 text-white font-bold text-lg">
@@ -507,37 +508,33 @@ const menu = [
 </div>
 
 <script is:inline>
-  const header    = document.getElementById('main-header');
-  const links     = document.querySelectorAll('.header-link');
-  const phone     = document.querySelector('.header-phone');
-  const burger    = document.querySelector('.header-burger');
+  const header     = document.getElementById('main-header');
+  const links      = document.querySelectorAll('.header-link');
+  const phone      = document.querySelector('.header-phone');
+  const burger     = document.querySelector('.header-burger');
   const mobileMenu = document.getElementById('mobile-menu');
-  const openBtn   = document.getElementById('mobile-menu-btn');
-  const closeBtn  = document.getElementById('close-menu-btn');
+  const openBtn    = document.getElementById('mobile-menu-btn');
+  const closeBtn   = document.getElementById('close-menu-btn');
 
-  // ── Scroll behavior ──
   function onScroll() {
     const scrolled = window.scrollY > 60;
-    header.classList.toggle('bg-white',      scrolled);
-    header.classList.toggle('shadow-md',     scrolled);
+    header.classList.toggle('bg-white',       scrolled);
+    header.classList.toggle('shadow-md',      scrolled);
     header.classList.toggle('bg-transparent', !scrolled);
-
     links.forEach(l => {
       l.classList.toggle('text-white', !scrolled);
       l.classList.toggle('text-navy',   scrolled);
     });
-    if (phone)  { phone.classList.toggle('text-white', !scrolled);  phone.classList.toggle('text-navy', scrolled); }
+    if (phone)  { phone.classList.toggle('text-white',  !scrolled); phone.classList.toggle('text-navy',  scrolled); }
     if (burger) { burger.classList.toggle('text-white', !scrolled); burger.classList.toggle('text-navy', scrolled); }
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // ── Menú móvil ──
   openBtn?.addEventListener('click', () => mobileMenu?.classList.remove('translate-x-full'));
   closeBtn?.addEventListener('click', () => mobileMenu?.classList.add('translate-x-full'));
 
-  // ── Acordeón móvil ──
   document.querySelectorAll('.mobile-trigger').forEach(btn => {
     btn.addEventListener('click', () => {
       const item    = btn.closest('.mobile-item');
@@ -545,7 +542,6 @@ const menu = [
       const icon    = btn.querySelector('i');
       const isOpen  = submenu?.style.maxHeight && submenu.style.maxHeight !== '0px';
 
-      // Cerrar todos
       document.querySelectorAll('.mobile-submenu').forEach(s => s.style.maxHeight = '0px');
       document.querySelectorAll('.mobile-trigger i').forEach(i => i.style.transform = '');
 

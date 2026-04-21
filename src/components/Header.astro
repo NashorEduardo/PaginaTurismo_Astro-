@@ -24,32 +24,6 @@ const menu = [
     },
   },
   {
-    label: 'MACHUPICCHU',
-    href: '/tours/machu-picchu',
-    type: 'mega-machu',
-    details: {
-      featured: {
-        title: "La Maravilla del Mundo",
-        desc: "Machu Picchu es el destino más icónico de Sudamérica. Descúbrelo con nuestros guías expertos y vive una experiencia que cambiará tu perspectiva del mundo.",
-        img: "/images/Machu.jpg",
-        href: "/tours/machu-picchu",
-      },
-      tours: [
-        { name: "Cusco, Machu Picchu, Maras y Moray", duration: "3D / 2N", img: "/images/Machu.jpg",                    href: "/tours/cusco-machu-picchu-3d" },
-        { name: "Cusco y Machu Picchu",        duration: "4D / 3N", img: "/images/ValleSagrado/Machu2.jpg",      href: "/tours/valle-sagrado-machu-picchu" },
-        { name: "Cusco, Valle Sagrado y Machu Picchu",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
-        { name: "Cusco, Machu Picchu y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
-        { name: "Cusco, Machu Picchu y Laguna Humantay",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
-        { name: "Cusco, Valle Sagrado, Machu Picchu y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
-        { name: "Cusco, Valle Sagrado, Machu Picchu y Laguna Humantay",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
-        { name: "Cusco, Machu Picchu, Humantay y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
-        { name: "Cusco, Machu Picchu y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
-        { name: "Cusco, Machu Picchu, Maras Moray y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
-           
-      ],
-    },
-  },
-  {
     label: 'TOUR CUSCO',
     href: '/tours/cusco',
     type: 'mega-cusco',
@@ -86,12 +60,39 @@ const menu = [
     },
   },
   {
+    label: 'MACHUPICCHU',
+    href: '/tours/machu-picchu',
+    type: 'mega-machu',
+    details: {
+      featured: {
+        title: "La Maravilla del Mundo",
+        desc: "Machu Picchu es el destino más icónico de Sudamérica. Descúbrelo con nuestros guías expertos y vive una experiencia que cambiará tu perspectiva del mundo.",
+        img: "/images/Machu.jpg",
+        href: "/tours/machu-picchu",
+      },
+      tours: [
+        { name: "Cusco, Machu Picchu, Maras y Moray", duration: "3D / 2N", img: "/images/Machu.jpg",                    href: "/tours/cusco-machu-picchu-3d" },
+        { name: "Cusco y Machu Picchu",        duration: "4D / 3N", img: "/images/ValleSagrado/Machu2.jpg",      href: "/tours/valle-sagrado-machu-picchu" },
+        { name: "Cusco, Valle Sagrado y Machu Picchu",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
+        { name: "Cusco, Machu Picchu y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
+        { name: "Cusco, Machu Picchu y Laguna Humantay",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
+        { name: "Cusco, Valle Sagrado, Machu Picchu y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
+        { name: "Cusco, Valle Sagrado, Machu Picchu y Laguna Humantay",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
+        { name: "Cusco, Machu Picchu, Humantay y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
+        { name: "Cusco, Machu Picchu y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
+        { name: "Cusco, Machu Picchu, Maras Moray y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machu-picchu-full-day" },
+           
+      ],
+    },
+  },
+  
+  {
     label: 'PERÚ BEYOND',
     href: '/nosotros',
     type: 'mega-brand',
     details: {
       links: [
-        { n: "Sobre Nosotros", h: "/nosotros", icon: "bi-people-fill" },
+        { n: "Sobre Nosotros", h: "/sobre-nosotros", icon: "bi-people-fill" },
         { n: "Nuestro Equipo", h: "/equipo",   icon: "bi-person-badge-fill" },
         { n: "Blog de Viajes", h: "/blog",     icon: "bi-journal-richtext" },
         { n: "Galería",        h: "/galeria",  icon: "bi-images" },
@@ -268,6 +269,74 @@ const menu = [
             )}
 
             <!-- ══════════════════════════════
+                 TOUR CUSCO
+            ══════════════════════════════ -->
+            {m.type === 'mega-cusco' && (
+              <div class="w-[860px] bg-white rounded-[28px] shadow-2xl overflow-hidden border border-gray-100">
+                
+                <!-- Header -->
+                <div class="px-8 pt-7 pb-5 flex items-end justify-between border-b border-gray-100">
+                  <div>
+                    <span class="text-gold text-[10px] font-bold uppercase tracking-widest block mb-1">
+                      Destinos
+                    </span>
+                    <h3 class="text-navy text-xl font-extrabold leading-tight">
+                      Explora Cusco
+                    </h3>
+                  </div>
+                  <a href="/tours/cusco"
+                    class="text-gray-400 hover:text-gold text-xs font-semibold flex items-center gap-1.5 transition-colors">
+                    Ver todos <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+
+                <!-- Cards -->
+                <div class="grid grid-cols-3 gap-0">
+                  {m.details.categories.map((cat, i) => (
+                    <div class={`relative h-[360px] overflow-hidden group/card cursor-pointer
+                                ${i < 2 ? 'border-r border-white/20' : ''}`}>
+                      
+                      <img src={cat.img}
+                          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110"
+                          alt={cat.title} />
+                      
+                      <!-- Overlay base -->
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/10"></div>
+                      <!-- Overlay hover dorado sutil -->
+                      <div class="absolute inset-0 bg-gold/0 group-hover/card:bg-gold/10 transition-colors duration-500"></div>
+
+                      <div class="absolute inset-0 flex flex-col justify-end p-6">
+                        
+                        <h3 class="text-white text-xl font-extrabold mb-2 leading-snug drop-shadow-lg">
+                          {cat.title}
+                        </h3>
+                        <div class="w-6 h-0.5 bg-gold mb-4
+                                    group-hover/card:w-12 transition-all duration-500"></div>
+                        
+                        <ul class="space-y-2.5 opacity-0 translate-y-4 
+                                  group-hover/card:opacity-100 group-hover/card:translate-y-0 
+                                  transition-all duration-300">
+                          {cat.tours.map(t => (
+                            <li>
+                              <a href={t.href}
+                                class="text-white/85 hover:text-gold text-[14px] font-medium
+                                        flex items-center gap-2 transition-colors group/link">
+                                <i class="bi bi-chevron-right text-gold text-[10px] 
+                                          group-hover/link:translate-x-0.5 transition-transform"></i>
+                                {t.name}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            )}
+
+            <!-- ══════════════════════════════
                  MACHUPICCHU
             ══════════════════════════════ -->
             {m.type === 'mega-machu' && (
@@ -326,40 +395,6 @@ const menu = [
                       </a>
                     </div>
                   </div>
-                </div>
-              </div>
-            )}
-
-            <!-- ══════════════════════════════
-                 TOUR CUSCO
-            ══════════════════════════════ -->
-            {m.type === 'mega-cusco' && (
-              <div class="w-[780px] bg-white rounded-[28px] shadow-2xl border border-gray-100 overflow-hidden p-6">
-                <p class="text-gray-400 text-xs uppercase tracking-widest font-semibold mb-4">Explora Cusco por categoría</p>
-                <div class="grid grid-cols-3 gap-4">
-                  {m.details.categories.map(cat => (
-                    <div class="relative h-[300px] rounded-2xl overflow-hidden group/card cursor-pointer">
-                      <img src={cat.img}
-                           class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110"
-                           alt={cat.title} />
-                      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/10"></div>
-                      <div class="absolute inset-0 flex flex-col justify-end p-5">
-                        <h3 class="text-white text-base font-extrabold mb-2">{cat.title}</h3>
-                        <div class="w-6 h-0.5 bg-gold mb-3"></div>
-                        <ul class="space-y-1.5 opacity-0 translate-y-3 group-hover/card:opacity-100 group-hover/card:translate-y-0 transition-all duration-400">
-                          {cat.tours.map(t => (
-                            <li>
-                              <a href={t.href}
-                                 class="text-white/90 hover:text-gold text-xs flex items-center gap-1.5 transition-colors">
-                                <span class="w-1 h-1 rounded-full bg-gold flex-shrink-0"></span>
-                                {t.name}
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  ))}
                 </div>
               </div>
             )}

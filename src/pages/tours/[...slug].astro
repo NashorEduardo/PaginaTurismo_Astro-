@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { title, image, price, duration, description, availability, frequency, difficulty, includes, excludes, itinerary, gallery, videoUrl, faq } = entry.data;
+const { title, image, price, duration, description, availability, frequency, difficulty, includes, excludes, itinerary, gallery, videoUrl, faq, wetravelUuid } = entry.data;
 // Rederizar el contenido 
 const { Content } = await render(entry);
 ---
@@ -195,7 +195,7 @@ const { Content } = await render(entry);
             </div>
           )}
         </div>
-      </section>
+      </section>  
 
       <!-- ── SECCIÓN: INCLUYE / NO INCLUYE (MODIFICADO - DISEÑO MÁS LIMPIO) ── -->
       {(includes || excludes) && (
@@ -454,6 +454,29 @@ const { Content } = await render(entry);
     <!-- SIDEBAR (formulario de contacto) -->
     <aside id="contacto" class="relative">
       <div class="sticky top-24 bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+        <!-- Botón WeTravel -->
+        {wetravelUuid && (
+          <div class="px-6 pt-6 pb-4 border-b border-gray-100">
+            <p class="text-xs text-gray-400 uppercase tracking-widest mb-3 text-center">
+              Reserva segura con WeTravel
+            </p>
+            <div style="text-align: center;">
+              <button 
+                class="wtrvl-checkout_button" 
+                id="wetravel_button_widget" 
+                data-env="https://www.wetravel.com" 
+                data-version="v0.4" 
+                data-uid="2226296" 
+                data-uuid={wetravelUuid}
+                href={`https://www.wetravel.com/checkout_embed?uuid=${wetravelUuid}`}
+                style="background-color:#33ae3f;color:#ffffff;border:0px;border-radius:5px;font-family:'Poppins',sans-serif;font-weight:400;font-size:17px;-webkit-font-smoothing:antialiased;text-transform:capitalize;padding:16px 32px;text-decoration:none;text-align:center;line-height:17px;display:inline-block;cursor:pointer;width:100%;">
+                Book Now
+              </button>
+            </div>
+          </div>
+        )}
+
+
         <div class="bg-orange-500 text-white text-center py-5 font-bold text-lg tracking-widest uppercase">
           Contáctenos
         </div>
@@ -785,9 +808,10 @@ const { Content } = await render(entry);
     });
   </script>
 
-
-
-
+<!-- Funcionamiento del Boton de weetravel  -->
+  <!-- Script WeTravel (solo si el tour tiene UUID) -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <script src="https://cdn.wetravel.com/widgets/embed_checkout.js" is:inline></script>
 
   <Footer />
   <a href="https://wa.me/51943491959" target="_blank" rel="noopener" class="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-green-500 text-white text-3xl flex items-center justify-center shadow-xl hover:scale-110 transition z-50" aria-label="WhatsApp">

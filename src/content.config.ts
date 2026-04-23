@@ -2,14 +2,24 @@ import { defineCollection, z } from 'astro:content';
 // 1. Importamos el loader de glob para archivos locales
 import { glob } from 'astro/loaders';
 
+//import { getCollection } from 'astro:content';
+//export async function getStaticPaths() {
+//  const tours = await getCollection('tours');
+//  return tours.map(tour => ({
+//    params: { slug: tour.id }, // O usa tour.slug si tu loader lo genera
+//    props: { tour },
+//  }));
+//}
+
 const toursCollection = defineCollection({
   // 2. CAMBIO CLAVE: Usamos loader en lugar de type: 'content'
   loader: glob({ pattern: '**/[^_]*.md', base: "./src/content/tours" }),
   schema: z.object({
     title: z.string(),
-    price: z.string(),
+    price: z.string(), 
     duration: z.string(),
     image: z.string(),
+    wetravelUuid: z.string().optional(),
     featured: z.boolean().optional(),
     description: z.string().optional(),
     availability: z.string().optional(),

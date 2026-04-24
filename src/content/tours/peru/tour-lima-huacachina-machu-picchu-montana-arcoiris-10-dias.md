@@ -145,4 +145,4 @@ faq:
 
 Vive una experiencia única en el Perú recorriendo desde la costa hasta los Andes en un viaje de 10 días y 9 noches lleno de cultura, historia y aventura. Inicia en Lima explorando su herencia colonial y modernidad, continúa hacia Paracas e Ica con las Islas Ballestas y el oasis de Huacachina, y luego viaja a Cusco para descubrir el legado inca.
 
-Explora el Valle Sagrado, visita Machu Picchu y complementa la experiencia con excursiones a la Laguna Humantay, Maras, Moray y la Montaña de Colores. Un recorrido completo que combina naturaleza, cultura y aventura en una experiencia inolvidable.
+Explora el Valle Sagrado, visita Machu Picchu y complementa la experiencia con excursiones a la Laguna Humantay, Maras, Moray y la Montaña de Colores. Un recorrido completo que combina naturaleza, cultura y aventura en una experiencia inolvidable. 

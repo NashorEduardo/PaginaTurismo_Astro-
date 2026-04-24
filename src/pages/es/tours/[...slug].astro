@@ -1,15 +1,19 @@
 ---
 import { getCollection, render } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
+import Layout from '../../../layouts/Layout.astro';
 
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
 
 // Otros tipos de Esperiencias 
-import ToursPeru from '../../components/ToursPeru.astro';
+import ToursPeru from '../../../components/ToursPeru.astro';
+
+// IDIOMAS 
+import { useTranslations } from '../../../i18n/utils'; 
+const t = useTranslations('es'); 
 
 export async function getStaticPaths() {
-  const tourEntries = await getCollection('tours');
+  const tourEntries = await getCollection('tours-es');
   return tourEntries.map(entry => ({
     params: { slug: entry.id },
     props: { entry },

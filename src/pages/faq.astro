@@ -25,71 +25,256 @@ const faqSections = [
     ],
   },
 ];
+
+const collageImages = [
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Machu_Picchu%2C_2023_%28012%29.jpg/1280px-Machu_Picchu%2C_2023_%28012%29.jpg',                                                              alt: 'Machu Picchu'       },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/6/6e/Plaza_de_Armas_-_Cusco.jpg',                                                                                                                     alt: 'Plaza de Cusco'     },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Monta%C3%B1aarcoirisperuabanto.jpg/1280px-Monta%C3%B1aarcoirisperuabanto.jpg',                                                             alt: 'Montaña de Colores' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Humantay_Lake.jpg/1280px-Humantay_Lake.jpg',                                                                                               alt: 'Laguna Humantay'    },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Oasis_de_Huacachina%2C_Ica%2C_Per%C3%BA%2C_2015-07-29%2C_DD_18.JPG/1280px-Oasis_de_Huacachina%2C_Ica%2C_Per%C3%BA%2C_2015-07-29%2C_DD_18.JPG', alt: 'Huacachina, Ica'   },
+];
 ---
 
 <Layout>
   <Header />
 
-  <div class="min-h-screen flex flex-col md:flex-row pt-[72px]">
+  <main class="bg-white">
 
-    <div class="relative md:w-[76px] md:flex-shrink-0 h-16 md:h-auto md:sticky md:top-[72px] md:self-start" style="height: calc(100vh - 72px);">
+    <!-- ══ HERO ══ -->
+    <section class="faq-hero relative flex flex-col items-center justify-center text-center text-white px-4 pt-20" style="height: 56vh;">
       <img
-        src="https://blog.incarail.com/wp-content/uploads/2025/06/laguna-humantay.webp"
-        alt="Preguntas Frecuentes"
+        src="https://images.unsplash.com/photo-1744296818983-fd0ad8636643?q=80&w=1920&auto=format&fit=crop"
+        alt="FAQ Peru Beyond"
         class="absolute inset-0 w-full h-full object-cover object-center"
-        onerror="this.src='https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=1920&auto=format&fit=crop'"
       />
-    </div>
-
-    <div class="flex-1" style="background-color:#F0FDF4">
-      <p class="script-title text-white/80 mb-4"></p>
-      <div class="relative z-10 flex flex-col items-center justify-center text-center px-8 pt-10 pb-4">
-        <p class="script-title mb-3">Peru Beyond</p>
-        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 drop-shadow-xl leading-tight mb-4">
-          Preguntas Frecuentes
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);"></div>
+      <div class="relative z-10">
+        <p class="script-title text-white/75 mb-3 text-lg">Peru Beyond</p>
+        <h1 class="faq-hero-title">
+          Preguntas <span class="text-gold">Frecuentes</span>
         </h1>
+        <p class="faq-hero-sub">Todo lo que necesitas saber antes de tu aventura peruana.</p>
+        <nav class="flex items-center justify-center gap-2 text-xs text-white/50 mt-5">
+          <a href="/" class="hover:text-white transition-colors">Inicio</a>
+          <span class="text-white/30">›</span>
+          <span class="text-white/80">FAQ</span>
+        </nav>
       </div>
-      
-      <div class="px-8 md:px-12 py-6 max-w-3xl mx-auto w-full">
-        {faqSections.map((section, si) => (
-          <div class={si > 0 ? 'mt-12' : ''}>
-            <div class="flex items-center gap-3 mb-4">
-              <h2 class="text-2xl font-extrabold text-gray-900">{section.category}</h2>
-              <span class="w-3 h-3 rounded-full bg-green-400 flex-shrink-0"></span>
-            </div>
-            <div class="divide-y divide-gray-200 border-t border-gray-200">
-              {section.items.map((item, ii) => (
-                <div class="faq-item">
-                  <button
-                    class="faq-trigger w-full flex items-center justify-between py-4 text-left gap-4 hover:text-green-700 transition-colors"
-                    aria-expanded="false"
-                  >
-                    <span class="font-semibold text-gray-800 text-sm md:text-base">
-                      <span class="text-gray-400 mr-2">{String(ii + 1).padStart(2, '0')}.</span>
-                      {item.q}
-                    </span>
-                    <span class="faq-icon w-7 h-7 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 flex-shrink-0 transition-transform duration-300">
-                      <i class="bi bi-plus text-lg"></i>
-                    </span>
-                  </button>
-                  <div class="faq-answer hidden pb-4 pr-10">
-                    {item.a
-                      ? <p class="text-gray-600 text-sm leading-relaxed">{item.a}</p>
-                      : <p class="text-gray-400 text-sm italic">Respuesta próximamente...</p>
-                    }
-                  </div>
-                </div>
-              ))}
+    </section>
+
+    <!-- ══ COLLAGE DE DESTINOS ══ -->
+    <section class="py-16 px-4" style="background-color: #faf9f7;">
+      <div class="max-w-5xl mx-auto">
+
+        <div class="text-center mb-10">
+          <span class="script-title block mb-2">Destinos que te esperan</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-navy">El Perú que vamos a mostrarte</h2>
+          <div class="w-10 h-px bg-amber-400 mx-auto mt-4"></div>
+        </div>
+
+        <!-- Mosaico bento (5 imágenes) -->
+        <div class="collage-grid">
+          <!-- 1: Grande izquierda — Machu Picchu -->
+          <div class="collage-tall overflow-hidden collage-img-wrap">
+            <img src={collageImages[0].src} alt={collageImages[0].alt} class="collage-img" />
+            <div class="collage-label">{collageImages[0].alt}</div>
+          </div>
+          <!-- 2: Centro arriba — Cusco -->
+          <div class="overflow-hidden collage-img-wrap">
+            <img src={collageImages[1].src} alt={collageImages[1].alt} class="collage-img" />
+            <div class="collage-label">{collageImages[1].alt}</div>
+          </div>
+          <!-- 3: Derecha arriba — Montaña Colores -->
+          <div class="overflow-hidden collage-img-wrap">
+            <img src={collageImages[2].src} alt={collageImages[2].alt} class="collage-img" />
+            <div class="collage-label">{collageImages[2].alt}</div>
+          </div>
+          <!-- 4: Centro abajo — Humantay -->
+          <div class="overflow-hidden collage-img-wrap">
+            <img src={collageImages[3].src} alt={collageImages[3].alt} class="collage-img" />
+            <div class="collage-label">{collageImages[3].alt}</div>
+          </div>
+          <!-- 5: Derecha abajo — Huacachina -->
+          <div class="overflow-hidden collage-img-wrap">
+            <img src={collageImages[4].src} alt={collageImages[4].alt} class="collage-img" />
+            <div class="collage-label">{collageImages[4].alt}</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ SECCIÓN FAQ ══ -->
+    <section class="py-20 px-4 bg-white">
+      <div class="max-w-5xl mx-auto">
+
+        <div class="grid md:grid-cols-[1fr_2fr] gap-16 items-start">
+
+          <!-- Columna izquierda: descripción sticky -->
+          <div class="md:sticky md:top-28">
+            <span class="script-title block mb-3">Soporte</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-navy leading-tight mb-4">
+              ¿Tienes alguna<br/>duda sobre tu viaje?
+            </h2>
+            <div class="w-8 h-px bg-amber-400 mb-5"></div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-8">
+              Aquí encontrarás respuestas a las preguntas más comunes. Si no encuentras lo que buscas, nuestro equipo está disponible para ayudarte.
+            </p>
+            <a
+              href="https://wa.me/51943491959"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-3 bg-gray-900 hover:bg-amber-500 text-white text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300"
+            >
+              <i class="bi bi-whatsapp text-base"></i>
+              Escríbenos al WhatsApp
+            </a>
+
+            <!-- Tarjeta de contacto -->
+            <div class="mt-8 p-5 rounded-2xl border border-amber-100 bg-amber-50">
+              <p class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-3">Contacto Directo</p>
+              <div class="flex items-center gap-3 mb-2">
+                <i class="bi bi-telephone text-amber-500"></i>
+                <a href="tel:+51943491959" class="text-sm text-gray-700 hover:text-amber-600 transition-colors">+51 943 491 959</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="bi bi-envelope text-amber-500"></i>
+                <a href="mailto:info@perubeyond.com" class="text-sm text-gray-700 hover:text-amber-600 transition-colors">info@perubeyond.com</a>
+              </div>
             </div>
           </div>
-        ))}
-      </div>
-    </div>
 
-  </div>
+          <!-- Columna derecha: acordeón -->
+          <div>
+            {faqSections.map((section, si) => (
+              <div class={si > 0 ? 'mt-12' : ''}>
+                <!-- Encabezado de categoría -->
+                <div class="flex items-center gap-3 mb-5">
+                  <div class="w-1 h-6 rounded-full" style="background-color: #c9a84c;"></div>
+                  <h2 class="text-lg font-bold text-navy tracking-wide">{section.category}</h2>
+                </div>
+
+                <div class="faq-group divide-y" style="border-color: #ece7de; border-top: 1px solid #ece7de;">
+                  {section.items.map((item, ii) => (
+                    <div class="faq-item">
+                      <button
+                        class="faq-trigger w-full flex items-center justify-between py-4 text-left gap-4"
+                        aria-expanded="false"
+                      >
+                        <span class="flex items-center gap-3 text-sm font-semibold text-gray-800">
+                          <span class="faq-num">{String(ii + 1).padStart(2, '0')}</span>
+                          {item.q}
+                        </span>
+                        <span class="faq-icon w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 flex-shrink-0 transition-all duration-300">
+                          <i class="bi bi-plus text-lg"></i>
+                        </span>
+                      </button>
+                      <div class="faq-answer hidden pb-5 pl-9 pr-4">
+                        {item.a
+                          ? <p class="text-gray-500 text-sm leading-relaxed">{item.a}</p>
+                          : <p class="text-gray-400 text-sm italic">Respuesta próximamente...</p>
+                        }
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <Footer />
 </Layout>
+
+<style>
+  /* ── Hero ── */
+  .faq-hero-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  }
+  .faq-hero-sub {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.72);
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  /* ── Collage ── */
+  .collage-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 230px 230px;
+    gap: 10px;
+  }
+  .collage-tall {
+    grid-row: span 2;
+  }
+  .collage-img-wrap {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .collage-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .collage-img-wrap:hover .collage-img {
+    transform: scale(1.06);
+  }
+  .collage-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 1rem 0.75rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ── FAQ Acordeón ── */
+  .faq-trigger {
+    transition: color 0.2s;
+  }
+  .faq-trigger:hover {
+    color: #c9a84c;
+  }
+  .faq-trigger:hover .faq-num {
+    color: #c9a84c;
+  }
+  .faq-num {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #c9a84c;
+    opacity: 0.7;
+    min-width: 1.5rem;
+    transition: opacity 0.2s;
+  }
+  .faq-item[data-open="true"] .faq-icon {
+    background-color: #c9a84c;
+    border-color: #c9a84c;
+    color: white;
+  }
+  .faq-icon {
+    transition: background-color 0.25s, border-color 0.25s, color 0.25s, transform 0.3s;
+  }
+</style>
 
 <script is:inline>
   document.querySelectorAll('.faq-trigger').forEach(btn => {
@@ -104,6 +289,7 @@ const faqSections = [
           other.querySelector('.faq-answer').classList.add('hidden');
           other.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
           other.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+          other.removeAttribute('data-open');
         }
       });
 
@@ -111,10 +297,12 @@ const faqSections = [
         answer.classList.add('hidden');
         btn.setAttribute('aria-expanded', 'false');
         icon.style.transform = 'rotate(0deg)';
+        item.removeAttribute('data-open');
       } else {
         answer.classList.remove('hidden');
         btn.setAttribute('aria-expanded', 'true');
         icon.style.transform = 'rotate(45deg)';
+        item.setAttribute('data-open', 'true');
       }
     });
   });

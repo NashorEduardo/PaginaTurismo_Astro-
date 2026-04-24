@@ -55,8 +55,10 @@ const certLogos = [
 
     <!-- Logos de certificaciones - fila inferior centrada -->
     <div class="flex flex-wrap justify-center items-center gap-8 pt-6 border-t border-gray-200">
-      {certLogos.map(c => (
-        <img src={c.src} alt={c.alt} class="h-20 object-contain" />
+      {certLogos.map((c, i) => (
+        <div class={`flex items-center justify-center ${i >= 1 && i <= 3 ? 'w-36 h-28' : 'w-28 h-20'}`}>
+          <img src={c.src} alt={c.alt} class="max-w-full max-h-full object-contain" />
+        </div>
       ))}
     </div>
   </div>

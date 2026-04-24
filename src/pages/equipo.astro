@@ -87,101 +87,99 @@ const teamMembers = [
 ];
 
 const tabs = [
-  { id: 'todos',         label: 'Todos' },
-  { id: 'asesores',     label: 'Asesores de viajes' },
+  { id: 'todos',          label: 'Todos' },
+  { id: 'asesores',      label: 'Asesores' },
   { id: 'administracion', label: 'Administración' },
-  { id: 'operaciones',  label: 'Operaciones' },
-  { id: 'guias',        label: 'Guías' },
-  { id: 'marketing',    label: 'TI & Marketing' },
+  { id: 'operaciones',   label: 'Operaciones' },
+  { id: 'guias',         label: 'Guías' },
+  { id: 'marketing',     label: 'TI & Marketing' },
 ];
 ---
 
 <Layout>
   <Header />
 
-  <!-- IMAGEN FIJA DE FONDO -->
-  <div class="fixed inset-0 -z-10">
+  <!-- ══ PORTADA / COVER HERO ══ -->
+  <section class="cover-hero">
     <img
       src="https://blog.incarail.com/wp-content/uploads/2025/06/laguna-humantay.webp"
-      alt="Fondo Nuestro Equipo"
-      class="w-full h-full object-cover object-center"
+      alt="Nuestro Equipo — Peru Beyond"
+      class="cover-img"
     />
-    <div class="absolute inset-0 bg-black/40"></div>
-  </div>
+    <div class="cover-overlay"></div>
 
-  <!-- HERO -->
-  <section class="h-[55vh] flex items-center justify-center text-center text-white px-4 pt-20">
-    <div>
-      <p class="script-title text-white/90 mb-3">Peru Beyond</p>
-      <h1 class="text-5xl md:text-7xl font-extrabold drop-shadow-2xl leading-tight">
-        Nuestro <span class="text-gold">Equipo</span>
+    <div class="cover-content">
+      <p class="cover-eyebrow">Peru Beyond</p>
+      <h1 class="cover-title">
+        Nuestro <span class="cover-title-gold">Equipo</span>
       </h1>
-      <nav class="flex items-center justify-center gap-2 text-sm mt-5 text-white/60">
-        <a href="/" class="hover:text-white transition-colors">Inicio</a>
-        <i class="bi bi-chevron-right text-[10px]"></i>
-        <span class="text-white/90">Nuestro Equipo</span>
+      <div class="cover-divider">
+        <div class="divider-line"></div>
+        <div class="divider-dot"></div>
+        <div class="divider-line divider-line--rev"></div>
+      </div>
+      <nav class="cover-breadcrumb">
+        <a href="/">Inicio</a>
+        <i class="bi bi-chevron-right"></i>
+        <span>Nuestro Equipo</span>
       </nav>
+    </div>
+
+    <div class="cover-scroll">
+      <span>Conocernos</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- SECCIONES -->
-  <div class="relative z-10 space-y-6 px-4 md:px-8 max-w-7xl mx-auto pb-0">
+  <!-- ══ CUERPO: fondo blanco ══ -->
+  <div class="page-body">
+    <div class="page-container">
 
-    <!-- ══ SECCIÓN 1: Foto grupal + descripción ══ -->
-    <div class="rounded-3xl shadow-2xl overflow-hidden" style="background-color:#F0FDF4">
-      <div class="p-8 md:p-12">
-
-        <!-- Encabezado centrado -->
-        <div class="text-center mb-8">
-          <span class="script-title">Perú Beyond</span>
-          <h2 class="text-3xl md:text-4xl font-extrabold mt-2 text-gray-900">
-            Nuestro Equipo de Trabajo
-          </h2>
-        </div>
-
-        <!-- Foto principal del equipo completo -->
-        <div class="rounded-2xl overflow-hidden shadow-xl mb-8">
-          <img
-            src="https://www.perubeyond.com/wp-content/uploads/2025/07/team-perubeyond.jpg"
-            alt="Equipo Peru Beyond"
-            class="w-full h-[420px] md:h-[520px] object-cover object-center"
-          />
-        </div>
-
-        <!-- Descripción debajo de la foto -->
-        <div class="max-w-4xl mx-auto text-center">
-          <p class="text-gray-700 text-base md:text-lg leading-relaxed font-medium">
-            En <strong>Perú Beyond</strong> transformamos cada viaje en una experiencia única e inolvidable.
-            Nuestra agencia se especializa en crear aventuras personalizadas que combinan cultura, naturaleza
-            y autenticidad, conectando a nuestros viajeros con la esencia del Perú. Con un equipo apasionado
-            y comprometido, nos encargamos de cada detalle para que cada viaje sea seguro, memorable y lleno
-            de momentos que trascienden.
+      <!-- ── SECCIÓN 1: Foto grupal completa ── -->
+      <section class="section-team-photo">
+        <div class="team-photo-header">
+          <span class="script-title">Peru Beyond</span>
+          <h2 class="section-heading">Nuestro Equipo de Trabajo</h2>
+          <div class="gold-rule gold-rule--center"></div>
+          <p class="section-sub">
+            En Peru Beyond transformamos cada viaje en una experiencia única e inolvidable.
+            Un equipo apasionado y comprometido, encargado de cada detalle para que tu aventura
+            sea segura, memorable y llena de momentos que trascienden.
           </p>
         </div>
 
-      </div>
-    </div>
+        <!-- Foto completa del equipo (sin recorte) -->
+        <div class="team-photo-wrap">
+          <img
+            src="https://www.perubeyond.com/wp-content/uploads/2025/07/team-perubeyond.jpg"
+            alt="Equipo Peru Beyond"
+            class="team-photo-img"
+          />
+          <div class="team-photo-badge">
+            <div class="badge-dot"></div>
+            <span>El equipo detrás de cada aventura</span>
+          </div>
+        </div>
+      </section>
 
-    <!-- ══ SECCIÓN 2: Tarjetas de integrantes ══ -->
-    <div class="rounded-3xl shadow-2xl overflow-hidden" style="background-color:#F0FDF4">
-      <div class="p-8 md:p-12">
+      <!-- ── SECCIÓN 2: Tarjetas del equipo ── -->
+      <section class="section-members">
 
-        <!-- Título sección -->
-        <div class="text-center mb-10">
-          <h2 class="text-3xl md:text-4xl font-extrabold text-green-700">Nuestro equipo</h2>
-          <p class="text-gray-500 mt-2 text-base">Conoce a los apasionados profesionales que hacen posible cada experiencia mágica</p>
+        <div class="members-header">
+          <span class="script-title">Personas</span>
+          <h2 class="section-heading">Conoce a los profesionales</h2>
+          <div class="gold-rule gold-rule--center"></div>
+          <p class="section-sub">
+            Apasionados por el Perú, dedicados a hacer de tu viaje una experiencia extraordinaria.
+          </p>
         </div>
 
-        <!-- Tabs de filtro -->
-        <div class="flex flex-wrap justify-center gap-2 mb-10" id="team-tabs">
+        <!-- Filtros -->
+        <div class="tabs-wrap" id="team-tabs">
           {tabs.map((tab, i) => (
             <button
               data-filter={tab.id}
-              class={`tab-btn px-5 py-2 rounded-full text-sm font-semibold border transition-all duration-200 ${
-                i === 0
-                  ? 'bg-green-700 text-white border-green-700'
-                  : 'bg-white text-gray-700 border-gray-300 hover:border-green-500 hover:text-green-600'
-              }`}
+              class={`tab-btn ${i === 0 ? 'tab-btn--active' : ''}`}
             >
               {tab.label}
             </button>
@@ -189,55 +187,48 @@ const tabs = [
         </div>
 
         <!-- Grid de tarjetas -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="team-grid">
+        <div class="members-grid" id="team-grid">
           {teamMembers.map(member => (
-            <div
-              class="team-card bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow border border-green-50 flex flex-col items-center text-center p-6"
-              data-category={member.category}
-            >
-              <!-- Foto circular -->
-              <div class="w-28 h-28 rounded-full overflow-hidden border-4 border-green-100 shadow-md mb-4 flex-shrink-0">
+            <div class="member-card" data-category={member.category}>
+              <div class="member-photo-wrap">
                 <img
                   src={member.photo}
                   alt={member.name}
-                  class="w-full h-full object-cover object-top"
+                  class="member-photo"
                   onerror="this.src='https://www.perubeyond.com/wp-content/uploads/2025/07/team-perubeyond.jpg'"
                 />
               </div>
-
-              <!-- Nombre y rol -->
-              <h3 class="font-extrabold text-gray-900 text-lg mb-1">{member.name}</h3>
-              <p class="text-teal-600 font-semibold text-sm mb-3">{member.role}</p>
-
-              <!-- Descripción -->
-              <p class="text-gray-500 text-sm leading-relaxed mb-5">{member.bio}</p>
-
-              <!-- Acciones -->
-              <div class="flex items-center gap-3 mt-auto">
-                <a
-                  href={`https://wa.me/${member.whatsapp.replace(/\D/g, '')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-green-600 hover:bg-green-50 transition-colors"
-                  title="WhatsApp"
-                >
-                  <i class="bi bi-whatsapp text-lg"></i>
-                </a>
-                <a
-                  href="/sobre-nosotros"
-                  class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-50 transition-colors"
-                  title="Ver más"
-                >
-                  <i class="bi bi-arrow-right text-lg"></i>
-                </a>
+              <div class="member-info">
+                <h3 class="member-name">{member.name}</h3>
+                <p class="member-role">{member.role}</p>
+                <div class="member-rule"></div>
+                <p class="member-bio">{member.bio}</p>
+                <div class="member-actions">
+                  <a
+                    href={`https://wa.me/${member.whatsapp.replace(/\D/g, '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="action-btn action-btn--wa"
+                    title="WhatsApp"
+                  >
+                    <i class="bi bi-whatsapp"></i>
+                  </a>
+                  <a
+                    href="/sobre-nosotros"
+                    class="action-btn action-btn--more"
+                    title="Ver más"
+                  >
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-      </div>
-    </div>
+      </section>
 
+    </div>
   </div>
 
   <Footer />
@@ -245,28 +236,354 @@ const tabs = [
 
 <script is:inline>
   const tabs = document.querySelectorAll('.tab-btn');
-  const cards = document.querySelectorAll('.team-card');
+  const cards = document.querySelectorAll('.member-card');
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       const filter = tab.dataset.filter;
 
-      // Actualizar estilos de tabs
-      tabs.forEach(t => {
-        t.classList.remove('bg-green-700', 'text-white', 'border-green-700');
-        t.classList.add('bg-white', 'text-gray-700', 'border-gray-300');
-      });
-      tab.classList.add('bg-green-700', 'text-white', 'border-green-700');
-      tab.classList.remove('bg-white', 'text-gray-700', 'border-gray-300');
+      tabs.forEach(t => t.classList.remove('tab-btn--active'));
+      tab.classList.add('tab-btn--active');
 
-      // Filtrar tarjetas
       cards.forEach(card => {
-        if (filter === 'todos' || card.dataset.category === filter) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
+        card.style.display =
+          filter === 'todos' || card.dataset.category === filter ? 'flex' : 'none';
       });
     });
   });
 </script>
+
+<style>
+  /* ════════════════════════════════
+     PORTADA / COVER HERO
+  ════════════════════════════════ */
+  .cover-hero {
+    position: relative;
+    height: 78vh;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .cover-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    transform: scale(1.04);
+    transition: transform 8s ease-out;
+  }
+  .cover-hero:hover .cover-img { transform: scale(1); }
+
+  .cover-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(10, 8, 5, 0.25) 0%,
+      rgba(10, 8, 5, 0.50) 50%,
+      rgba(10, 8, 5, 0.72) 100%
+    );
+  }
+
+  .cover-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  .cover-eyebrow {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: rgba(201,168,76,0.85);
+    margin-bottom: 1.25rem;
+  }
+  .cover-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 32px rgba(0,0,0,0.4);
+    letter-spacing: -0.02em;
+  }
+  .cover-title-gold { color: #c9a84c; }
+
+  .cover-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .divider-line {
+    width: 64px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #c9a84c);
+  }
+  .divider-line--rev { background: linear-gradient(to left, transparent, #c9a84c); }
+  .divider-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #c9a84c;
+  }
+
+  .cover-breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+  }
+  .cover-breadcrumb a { color: inherit; transition: color 0.2s; }
+  .cover-breadcrumb a:hover { color: #fff; }
+  .cover-breadcrumb i { font-size: 0.6rem; }
+  .cover-breadcrumb span { color: rgba(255,255,255,0.88); }
+
+  .cover-scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.58rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(201,168,76,0.6), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; transform: scaleY(1); }
+    50%       { opacity: 1;   transform: scaleY(1.1); }
+  }
+
+  /* ════════════════════════════════
+     CUERPO BLANCO
+  ════════════════════════════════ */
+  .page-body { background: #fff; }
+  .page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  /* Helpers */
+  .section-heading {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    color: #0D1B2E;
+    line-height: 1.2;
+    margin: 0.75rem 0 0;
+  }
+  .gold-rule {
+    width: 40px;
+    height: 2px;
+    background: #c9a84c;
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .gold-rule--center { margin-left: auto; margin-right: auto; }
+  .section-sub {
+    font-size: 0.95rem;
+    color: #9ca3af;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* ── Foto grupal ── */
+  .section-team-photo { display: flex; flex-direction: column; gap: 2.5rem; }
+
+  .team-photo-header { text-align: center; }
+
+  .team-photo-wrap {
+    position: relative;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.10);
+    border: 1px solid #f0ebe2;
+  }
+  /* imagen completa: auto height para no recortar nada */
+  .team-photo-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+    background: #faf9f7;
+  }
+  .team-photo-badge {
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(8px);
+    border: 1px solid #f3ede1;
+    border-radius: 9999px;
+    padding: 0.5rem 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #374151;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  .badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #c9a84c;
+    flex-shrink: 0;
+  }
+
+  /* ── Miembros ── */
+  .section-members { display: flex; flex-direction: column; gap: 2.5rem; }
+  .members-header { text-align: center; }
+
+  /* Tabs */
+  .tabs-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .tab-btn {
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    border: 1.5px solid #e5e7eb;
+    background: #fff;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .tab-btn:hover { border-color: #c9a84c; color: #c9a84c; }
+  .tab-btn--active {
+    background: #111827;
+    color: #fff;
+    border-color: #0D1B2E;
+  }
+  .tab-btn--active:hover { background: #c9a84c; border-color: #c9a84c; color: #fff; }
+
+  /* Grid */
+  .members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* Tarjeta */
+  .member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #f0ebe2;
+    border-radius: 1.25rem;
+    padding: 2rem 1.75rem 1.75rem;
+    transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+  }
+  .member-card:hover {
+    box-shadow: 0 16px 48px rgba(201,168,76,0.12);
+    transform: translateY(-3px);
+    border-color: rgba(201,168,76,0.35);
+  }
+
+  .member-photo-wrap {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #f3ede1;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-bottom: 1.25rem;
+    flex-shrink: 0;
+    transition: border-color 0.3s;
+  }
+  .member-card:hover .member-photo-wrap { border-color: #c9a84c; }
+
+  .member-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .member-name {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0D1B2E;
+    margin-bottom: 0.25rem;
+  }
+  .member-role {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #c9a84c;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  .member-rule {
+    width: 1.5rem;
+    height: 2px;
+    background: #f0ebe2;
+    margin: 0.85rem auto;
+    transition: background 0.3s;
+  }
+  .member-card:hover .member-rule { background: #c9a84c; }
+
+  .member-bio {
+    font-size: 0.83rem;
+    color: #9ca3af;
+    line-height: 1.7;
+    flex: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  .member-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: auto;
+  }
+  .action-btn {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    border: 1.5px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.2s;
+  }
+  .action-btn--wa { color: #c9a84c; }
+  .action-btn--wa:hover { background: #c9a84c; color: #fff; border-color: #c9a84c; }
+  .action-btn--more { color: #9ca3af; }
+  .action-btn--more:hover { background: #111827; color: #fff; border-color: #0D1B2E; }
+</style>

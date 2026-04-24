@@ -4,14 +4,15 @@ const destinos = [
   { name: 'Tours en Lima', tours: 10, image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Lima%2C_Peru%E2%80%A6the_Plaza_de_Armas_de_Lima_by_day_%288444360764%29.jpg/1280px-Lima%2C_Peru%E2%80%A6the_Plaza_de_Armas_de_Lima_by_day_%288444360764%29.jpg' },
   { name: 'Tours en Arequipa', tours: 7, image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/In_Aerquipa_Peru%2C%E2%80%A6Plaza_de_Armas_%288443293545%29.jpg/1280px-In_Aerquipa_Peru%2C%E2%80%A6Plaza_de_Armas_%288443293545%29.jpg' },
   { name: 'Tours en Ica', tours: 7, image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Oasis_de_Huacachina%2C_Ica%2C_Per%C3%BA%2C_2015-07-29%2C_DD_18.JPG/1280px-Oasis_de_Huacachina%2C_Ica%2C_Per%C3%BA%2C_2015-07-29%2C_DD_18.JPG' },
+  { name: 'Tours en Puno', tours: 2, image: 'https://www.machupicchuterra.com/wp-content/uploads/tour-uros-puno-7-media.jpg' },
 ];
 ---
-<section class="section" style="background-color: #F3F8F3;">
+<section class="section destinations-section">
   <div class="container-pb">
     <div class="text-center mb-12">
-      <span class="script-title">Destinos</span>
-      <h2 class="text-3xl md:text-4xl font-bold mt-2">Estos destinos te esperan… Más de lo que imaginas</h2>
-      <p class="text-sm text-gray-500 mt-3 max-w-xl mx-auto">Explora los mejores destinos de Perú: Cusco, Lima, Arequipa y Puno. Cultura, historia y paisajes únicos te esperan en cada rincón. ¡Descúbrelos todos!</p>
+      <span class="script-title" style="color: #f6d06a;">Destinos</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2" style="color: #ffffff;">Estos destinos te esperan… Más de lo que imaginas</h2>
+      <p class="text-sm mt-3 max-w-xl mx-auto" style="color: rgba(255,255,255,0.55);">Explora los mejores destinos de Perú: Cusco, Lima, Arequipa y Puno. Cultura, historia y paisajes únicos te esperan en cada rincón. ¡Descúbrelos todos!</p>
     </div>
     <div class="swiper destinos-swiper">
       <div class="swiper-wrapper">
@@ -31,11 +32,34 @@ const destinos = [
     </div>
   </div>
 </section>
+<style>
+  .destinations-section {
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.03) 0%, transparent 50%),
+      linear-gradient(160deg, #0d1b2e 0%, #112438 55%, #0a1620 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .destinations-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  .destinations-section .swiper-pagination-bullet {
+    background: rgba(255,255,255,0.3) !important;
+  }
+  .destinations-section .swiper-pagination-bullet-active {
+    background: #c9a84c !important;
+  }
+</style>
 <script is:inline>
   window.addEventListener('load', () => {
     if (window.Swiper) new Swiper('.destinos-swiper', {
       slidesPerView: 1, spaceBetween: 20, pagination: { el: '.destinos-swiper .swiper-pagination', clickable: true },
-      breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 }, 1280: { slidesPerView: 4 } }
+      breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 }, 1280: { slidesPerView: 5 } }
     });
   });
 </script>

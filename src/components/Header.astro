@@ -1,5 +1,28 @@
 ---
-const menu = [
+interface PeruLink  { n: string; h: string }
+interface MachuTour { name: string; duration: string; img: string; href: string }
+interface CuscoTour { name: string; href: string }
+interface BrandLink { n: string; h: string; icon: string }
+
+interface MegaPeruItem {
+  label: string; href: string; type: 'mega-peru';
+  details: { title: string; desc: string; links: PeruLink[]; images: { src: string; label: string }[] };
+}
+interface MegaCuscoItem {
+  label: string; href: string; type: 'mega-cusco';
+  details: { categories: { title: string; img: string; tours: CuscoTour[] }[] };
+}
+interface MegaMachuItem {
+  label: string; href: string; type: 'mega-machu';
+  details: { featured: { title: string; desc: string; img: string; href: string }; tours: MachuTour[] };
+}
+interface MegaBrandItem {
+  label: string; href: string; type: 'mega-brand';
+  details: { links: BrandLink[]; contact: { phone: string; email: string; whatsapp: string }; image: string; tagline: string };
+}
+type MenuItem = MegaPeruItem | MegaCuscoItem | MegaMachuItem | MegaBrandItem;
+
+const menu: MenuItem[] = [
   { 
     label: 'TOURS PERÚ',
     href: '/tours',
@@ -53,7 +76,7 @@ const menu = [
           img: "/images/ValleSagrado/moray.webp",
           tours: [
             { name: "Machu Picchu Full Day", href: "/tours/cusco/machu-picchu-full-day-tour" },
-            { name: "Maras & Moray",         href: "/tours/cusco/super-valle-sagrado-full-day" },
+            { name: "Maras & Moray",         href: "/tours/cusco/super-valle-sagrado" },
             { name: "Valle Sagrado Clásico", href: "/tours/cusco/maras-moray-salineras-tour" },
           ],
         },
@@ -72,16 +95,16 @@ const menu = [
         href: "/tours/machu-picchu",
       },
       tours: [
-        { name: "Cusco, Machu Picchu, Maras y Moray", duration: "3D / 2N", img: "/images/Machu.jpg",                                                    href: "/tours/machupicchu/cusco-machu-picchu-maras-moray-3d-2n" },
-        { name: "Cusco y Machu Picchu",        duration: "4D / 3N", img: "/images/ValleSagrado/Machu2.jpg",                                             href: "/tours/machupicchu/cusco-machu-picchu-3d-2n" },
-        { name: "Cusco, Valle Sagrado y Machu Picchu",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",                       href: "/tours/machupicchu/cusco-valle-sagrado-machu-picchu-4d-3n" },
-        { name: "Cusco, Machu Picchu y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",                  href: "/tours/machupicchu/cusco-machu-picchu-montana-colores-4d-3n" },
-        { name: "Cusco, Machu Picchu y Laguna Humantay",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",                     href: "/tours/machupicchu/cusco-machu-picchu-humantay-4d-3n" },
-        { name: "Cusco, Valle Sagrado, Machu Picchu y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",   href: "/tours/machupicchu/cusco-valle-sagrado-machu-picchu-montana-colores-5d-4n" },
-        { name: "Cusco, Valle Sagrado, Machu Picchu y Laguna Humantay",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",      href: "/tours/machupicchu/cusco-valle-sagrado-machu-picchu-humantay-5d-4n" },
-        { name: "Cusco, Machu Picchu, Humantay y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",        href: "/tours/machupicchu/cusco-machu-picchu-humantay-montana-colores-5d-4n" },
-        { name: "Cusco, Machu Picchu y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",                  href: "/tours/machupicchu/cusco-machu-picchu-montana-colores-6d-5n" },
-        { name: "Cusco, Machu Picchu, Maras Moray y Montaña de Colores",               duration: "1 Día",   img: "/images/ValleSagrado/Machu3.jpg",     href: "/tours/machupicchu/cusco-machu-picchu-maras-moray-montana-colores-7d-6n" },
+        { name: "Cusco, Machu Picchu, Maras y Moray",                    duration: "3D / 2N", img: "/images/Machu.jpg", href: "/tours/machupicchu/cusco-machu-picchu-maras-moray-3d-2n" },
+        { name: "Cusco y Machu Picchu",                                   duration: "3D / 2N", img: "/images/Machu.jpg", href: "/tours/machupicchu/cusco-machu-picchu-3d-2n" },
+        { name: "Cusco, Valle Sagrado y Machu Picchu",                    duration: "4D / 3N", img: "/images/Machu.jpg", href: "/tours/machupicchu/cusco-valle-sagrado-machu-picchu-4d-3n" },
+        { name: "Cusco, Machu Picchu y Montaña de Colores",              duration: "4D / 3N", img: "/images/Machu.jpg", href: "/tours/machupicchu/cusco-machu-picchu-montana-colores-4d-3n" },
+        { name: "Cusco, Machu Picchu y Laguna Humantay",                  duration: "4D / 3N", img: "/images/Machu.jpg", href: "/tours/machupicchu/cusco-machu-picchu-humantay-4d-3n" },
+        { name: "Cusco, Valle Sagrado, Machu Picchu y Montaña de Colores", duration: "5D / 4N", img: "/images/Machu.jpg", href: "/tours/machupicchu/cusco-valle-sagrado-machu-picchu-montana-colores-5d-4n" },
+        { name: "Cusco, Valle Sagrado, Machu Picchu y Laguna Humantay",   duration: "5D / 4N", img: "/images/Machu.jpg", href: "/tours/machupicchu/cusco-valle-sagrado-machu-picchu-humantay-5d-4n" },
+        { name: "Cusco, Machu Picchu, Humantay y Montaña de Colores",    duration: "5D / 4N", img: "/images/Machu.jpg", href: "/tours/machupicchu/cusco-machu-picchu-humantay-montana-colores-5d-4n" },
+        { name: "Cusco, Machu Picchu y Montaña de Colores",              duration: "6D / 5N", img: "/images/Machu.jpg", href: "/tours/machupicchu/cusco-machu-picchu-montana-colores-6d-5n" },
+        { name: "Cusco, Machu Picchu, Maras Moray y Montaña de Colores", duration: "7D / 6N", img: "/images/Machu.jpg", href: "/tours/machupicchu/cusco-machu-picchu-maras-moray-montana-colores-7d-6n" },
            
       ],
     },
@@ -124,10 +147,8 @@ const menu = [
     </a>
 
     <!-- Nav Desktop -->
-    <!-- CAMBIO 1: el nav tiene position relative para que mega-peru se ancle a él -->
-    <nav class="hidden lg:flex items-center h-full ">
+    <nav class="hidden lg:flex items-center h-full">
       {menu.map(m => (
-        <!-- CAMBIO 2: mega-peru usa static, el resto usa relative -->
         <div class="group h-full flex items-center relative">
           <a href={m.href}
              class="header-link font-bold text-[13px] tracking-wider px-5 py-2 transition-all duration-300 text-white hover:text-gold flex items-center gap-1.5 rounded-lg hover:bg-white/10">
@@ -135,7 +156,6 @@ const menu = [
             <i class="bi bi-chevron-down text-[9px] transition-transform duration-300 group-hover:rotate-180 opacity-60"></i>
           </a>
 
-          <!-- CAMBIO 3: dropdown wrapper diferenciado por tipo -->
           <div class={`mega-dropdown pt-1
             opacity-0 invisible pointer-events-none 
             group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto 
@@ -150,7 +170,7 @@ const menu = [
                 TOURS PERÚ - VERSIÓN MEJORADA
             ══════════════════════════════ -->
             {m.type === 'mega-peru' && (
-              <div class="w-[1180px] bg-white rounded-[28px] shadow-2xl border border-gray-100 overflow-hidden">
+              <div class="w-full bg-white rounded-[28px] shadow-2xl border border-gray-100 overflow-hidden">
                 <div class="grid grid-cols-12 gap-0">
 
                   <!-- IZQUIERDA -->
@@ -235,7 +255,6 @@ const menu = [
 
                       {m.details.images.map((img, index) => (
                         <div 
-                          key={index}
                           class="relative h-full min-h-[420px] rounded-[20px] overflow-hidden 
                                 group/card cursor-pointer shadow-lg"
                         >
@@ -476,6 +495,38 @@ const menu = [
         <i class="bi bi-list"></i>
       </button>
     </div>
+
+    <!-- Selector de idioma -->
+    <div class="relative group/lang hidden lg:flex items-center">
+      <button class="flex items-center gap-1.5 text-white font-bold text-[13px] tracking-wider px-3 py-2 rounded-lg hover:bg-white/10 transition-all">
+        <i class="bi bi-globe text-gold"></i>
+        ES
+        <i class="bi bi-chevron-down text-[9px] opacity-60 transition-transform duration-300 group-hover/lang:rotate-180"></i>
+      </button>
+
+      <!-- Dropdown idiomas -->
+      <div class="absolute top-[100%] right-0 pt-2
+                  opacity-0 invisible pointer-events-none
+                  group-hover/lang:opacity-100 group-hover/lang:visible group-hover/lang:pointer-events-auto
+                  transition-all duration-300 translate-y-2 group-hover/lang:translate-y-0">
+        <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden w-36">
+          <a href="/es" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors group/item border-b border-gray-50">
+            <span class="text-lg">🇵🇪</span>
+            <span class="text-sm font-bold text-navy group-hover/item:text-gold transition-colors">Español</span>
+          </a>
+          <a href="/en" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors group/item border-b border-gray-50">
+            <span class="text-lg">🇺🇸</span>
+            <span class="text-sm font-bold text-navy group-hover/item:text-gold transition-colors">English</span>
+          </a>
+          <a href="/pt" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors group/item">
+            <span class="text-lg">🇧🇷</span>
+            <span class="text-sm font-bold text-navy group-hover/item:text-gold transition-colors">Português</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 </header>
 

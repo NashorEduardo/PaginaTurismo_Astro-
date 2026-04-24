@@ -44,11 +44,14 @@ const proyectos = [
   },
 ];
 ---
-<section id="proyectos-sociales" class="section bg-softgreen">
-  <div class="container-pb">
+<section id="proyectos-sociales" class="section cusco-slider-bg">
+  <span class="deco-line-top"></span>
+  <span class="deco-line-bottom"></span>
+  <span class="deco-circle"></span>
+  <div class="container-pb" style="position:relative;z-index:1;">
     <div class="text-center mb-12">
       <span class="script-title">Proyectos sociales</span>
-      <h2 class="text-3xl md:text-4xl font-bold mt-2">Al viajar con nosotros, contribuyes así</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2" style="color:#0d1b2e;">Al viajar con nosotros, contribuyes así</h2>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       {proyectos.map(p => (
@@ -67,3 +70,86 @@ const proyectos = [
     </div>
   </div>
 </section>
+
+<style>
+  /* ── Fondo claro elegante ── */
+  .cusco-slider-bg {
+    position: relative;
+    overflow: hidden;
+
+    /* Base crema cálida */
+    background-color: #fdf9f1;
+
+    /* Patrón de puntos dorados */
+    background-image:
+      radial-gradient(circle, rgba(201,168,76,0.18) 1.5px, transparent 1.5px);
+    background-size: 26px 26px;
+  }
+
+  /* Degradados que suavizan los bordes del patrón */
+  .cusco-slider-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 0% 0%,   rgba(253,249,241,0.92) 0%, transparent 45%),
+      radial-gradient(ellipse at 100% 0%,  rgba(253,249,241,0.92) 0%, transparent 45%),
+      radial-gradient(ellipse at 0% 100%,  rgba(253,249,241,0.92) 0%, transparent 45%),
+      radial-gradient(ellipse at 100% 100%,rgba(253,249,241,0.92) 0%, transparent 45%),
+      radial-gradient(ellipse at 50% 50%,  rgba(253,249,241,0.40) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Círculo decorativo — esquina superior derecha */
+  .cusco-slider-bg::after {
+    content: '';
+    position: absolute;
+    top: -140px;
+    right: -140px;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.14);
+    box-shadow:
+      0 0 0 44px  rgba(201,168,76,0.05),
+      0 0 0 90px  rgba(201,168,76,0.03),
+      0 0 0 138px rgba(201,168,76,0.015);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Círculo decorativo — esquina inferior izquierda (via span) */
+  .cusco-slider-bg .deco-circle {
+    position: absolute;
+    bottom: -120px;
+    left: -120px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.12);
+    box-shadow:
+      0 0 0 38px rgba(201,168,76,0.04),
+      0 0 0 78px rgba(201,168,76,0.02);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Línea decorativa dorada superior */
+  .cusco-slider-bg .deco-line-top {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent 0%, rgba(201,168,76,0.5) 30%, rgba(246,208,106,0.7) 50%, rgba(201,168,76,0.5) 70%, transparent 100%);
+    z-index: 1;
+  }
+
+  /* Línea decorativa dorada inferior */
+  .cusco-slider-bg .deco-line-bottom {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent 0%, rgba(201,168,76,0.5) 30%, rgba(246,208,106,0.7) 50%, rgba(201,168,76,0.5) 70%, transparent 100%);
+    z-index: 1;
+  }
+</style>

@@ -9,7 +9,7 @@ import Footer from '../../../components/Footer.astro';
 import ToursPeru from '../../../components/ToursPeru.astro';
 
 export async function getStaticPaths() {
-  const tourEntries = await getCollection('tours');
+  const tourEntries = await getCollection('tours-en');
   return tourEntries.map(entry => ({
     params: { slug: entry.id },
     props: { entry },
